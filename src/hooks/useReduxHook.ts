@@ -1,20 +1,20 @@
 import { useDispatch } from 'react-redux';
-import { useAppSelector } from '../redux/hooks/reduxHooks';
-import { mixAndSort } from '../utils/sortArray';
+import { useAppSelector } from 'redux/hooks/reduxHooks';
+import { mixAndSort } from 'utils/sortArray';
 import { useStorageHook } from './useStorageHook';
 import {
-  startNewGame,
-  setCardsArray,
+  setIsEndGame,
+  setUserName,
+  setGameScore,
+  setOpenedCard,
   resetGame,
+  setCardsArray,
+  startNewGame,
   setClickBlocked,
   clearOpenCard,
-  setIsEndGame,
   setMatched,
-  setUserName,
-  showScoreBoard,
-  setGameScore,
-  setOpenedCard
-} from '../redux/project';
+  showScoreBoard
+} from 'redux/project';
 
 export const useReduxHook = () => {
   const dispatch = useDispatch();
@@ -68,6 +68,13 @@ export const useReduxHook = () => {
     dispatch_endGame();
   };
 
+  const flipCard = (index: number) => {
+    dispatch_setGamescore();
+    if (!clickBlocked && index !== openedCard[0]) {
+      dispatch_openedCard(index);
+    }
+  };
+
   return {
     dispatch_endGame,
     mixedArray,
@@ -89,6 +96,7 @@ export const useReduxHook = () => {
     handleGameWon,
     dispatch_setGamescore,
     dispatch_openedCard,
-    clickBlocked
+    clickBlocked,
+    flipCard
   };
 };

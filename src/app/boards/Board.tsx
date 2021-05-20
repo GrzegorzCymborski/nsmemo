@@ -1,7 +1,7 @@
 import React from 'react';
+import CardElement from 'app/card/Card';
+import { useReduxHook } from 'hooks/useReduxHook';
 import { Alert, Button, Card } from 'react-bootstrap';
-import { useReduxHook } from '../../hooks/useReduxHook';
-import CardElement from '../card/Card';
 
 const Board = () => {
   const { openedCard, matched, mixedArray, gameScore, handleResetGame } = useReduxHook();

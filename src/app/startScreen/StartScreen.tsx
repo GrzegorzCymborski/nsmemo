@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
+import { useReduxHook } from 'hooks/useReduxHook';
 import { Card, Form, Button } from 'react-bootstrap';
-import { useReduxHook } from '../../hooks/useReduxHook';
 
 const StartScreen = () => {
   const { handleStartGame, dispatch_userName, toggleScoreBoard } = useReduxHook();

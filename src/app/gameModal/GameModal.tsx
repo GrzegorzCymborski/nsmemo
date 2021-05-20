@@ -1,6 +1,6 @@
 import React from 'react';
+import { useReduxHook } from 'hooks/useReduxHook';
 import { Modal, Button } from 'react-bootstrap';
-import { useReduxHook } from '../../hooks/useReduxHook';
 
 const GameModal = ({ show }: { show: boolean }) => {
   const { handleResetGame, gameScore } = useReduxHook();

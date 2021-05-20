@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react';
-import Board from './app/boards/Board';
-import GameModal from './app/gameModal/GameModal';
-import Mainwrapper from './app/mainWrapper/MainWrapper';
-import ScoreTable from './app/scoreTable/ScoreTable';
-import StartScreen from './app/startScreen/StartScreen';
-import { useReduxHook } from './hooks/useReduxHook';
+import Board from 'app/boards/Board';
+import GameModal from 'app/gameModal/GameModal';
+import Mainwrapper from 'app/mainWrapper/MainWrapper';
+import ScoreTable from 'app/scoreTable/ScoreTable';
+import StartScreen from 'app/startScreen/StartScreen';
+import { useReduxHook } from 'hooks/useReduxHook';
 
 export const App = () => {
   const {

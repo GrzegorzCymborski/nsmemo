@@ -1,4 +1,4 @@
-import { useAppSelector } from '../redux/hooks/reduxHooks';
+import { useAppSelector } from 'redux/hooks/reduxHooks';
 
 export const useStorageHook = () => {
   const {

@@ -1,7 +1,7 @@
 import React from 'react';
+import { useReduxHook } from 'hooks/useReduxHook';
+import { useStorageHook } from 'hooks/useStorageHook';
 import { Card, Button, Table } from 'react-bootstrap';
-import { useReduxHook } from '../../hooks/useReduxHook';
-import { useStorageHook } from '../../hooks/useStorageHook';
 
 const ScoreTable = () => {
   const { toggleScoreBoard } = useReduxHook();
